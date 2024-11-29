@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'; // Necessário para o uso de hooks no App Router
 
 import { createContext, ReactNode, useContext, useState } from 'react';
