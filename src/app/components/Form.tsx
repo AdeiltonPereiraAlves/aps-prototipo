@@ -16,6 +16,10 @@ export default function Form(props: any){
           alert("Por favor, preencha todos os campos!");
           return;
         }
+        setEmail('')
+        setSenha('')
+        setMatricula('')
+        setName('')
     
         // Redireciona para a página "Tela"
         router.push('/Home/Inicio');

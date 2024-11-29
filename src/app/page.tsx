@@ -10,12 +10,9 @@ export default function Home() {
   
   function ativar(){
     
-    setAlunoOuFucionario(true)
+    setAlunoOuFucionario((falso) => !falso)
   }
-  function desativar(){
-    
-    setAlunoOuFucionario(false)
-  }
+
  
 
   return (
@@ -25,7 +22,7 @@ export default function Home() {
       
 
        <button onClick={()=>ativar()}>Aluno</button>
-       <button onClick={()=>desativar()}>Funcionario</button>
+       <button onClick={()=>ativar()}>Funcionario</button>
        </div>
        <Form alunoOuFuncionario= {alunoOuFuncionario} cadastroOuLogin={cadastroOuLogin}/>
     </div>

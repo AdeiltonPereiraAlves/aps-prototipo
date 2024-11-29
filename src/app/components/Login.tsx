@@ -1,8 +1,9 @@
 import { useState } from "react";
-
+import { useRouter } from "next/navigation"
 export default function Login(){
-    const [email, setEmail] = useState("")
-    const [senha , setSenha] = useState("")
+    const [email, setEmail] = useState<string>("")
+    const [senha , setSenha] = useState<string>("")
+    const router = useRouter()
     return (
         <div>
             <h4>Login</h4>
@@ -12,6 +13,7 @@ export default function Login(){
                 <label >Senha:</label>
                 <input type="password" name="senha" value={senha} onChange={(e) => setSenha(e.target.value)}/>
             </div>
+            <button onClick={()=> router.push('/Home/Inicio')}>Login</button>
         </div>
     )
 }

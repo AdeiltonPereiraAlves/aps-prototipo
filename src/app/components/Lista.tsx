@@ -1,11 +1,11 @@
-import { useMyContext } from '../context/MeuContexto';
+import Lista, { useMyContext } from '../context/MeuContexto';
 
 export default function Listar() {
   const { listaArray } = useMyContext();
 
   return (
     <div>
-      {listaArray && listaArray.map((item: any) => (
+      {listaArray && listaArray.map((item: Lista) => (
         <div key={item.id}>
           <div>{item.nome}</div>
           {/* Adicione outros detalhes */}
