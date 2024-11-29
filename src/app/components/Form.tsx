@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Login from "./Login"
 export default function Form(props: any){
-    const {alunoOuFuncionario} = props
+    const {alunoOuFuncionario, cadastroOuLogin} = props
     const[name, setName] = useState('')
     const[email, setEmail] = useState('')
     const[matricula, setMatricula] = useState('')
@@ -20,8 +21,9 @@ export default function Form(props: any){
         router.push('/Home/Inicio');
       };
    
-    return(
+    return cadastroOuLogin?(
         <div>
+            {cadastroOuLogin}
             <div className="flex flex-col">
                 <label >Nome</label>
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -35,5 +37,5 @@ export default function Form(props: any){
             </div>
             <button onClick={handleCadastro}>cadastrar</button>
         </div>
-    )
+    ):(<Login/>)
 }
