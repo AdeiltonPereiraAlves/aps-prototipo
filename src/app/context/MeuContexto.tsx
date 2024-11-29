@@ -25,7 +25,7 @@ const MeuContext = createContext<MyContextType|undefined>(undefined);
 // Provider do contexto
 export const MeuContextoProvider = ({ children }: { children: ReactNode }) => {
   const [cadastroOuLogin, setCadastroOuLogin] = useState<boolean>(true);
-  const [listaArray, setListaArray] = useState(lista)
+  const [listaArray] = useState(lista)
   // Função para alternar entre cadastro e login
   const CadastroOuLogin = () => {
     setCadastroOuLogin((prevState) => !prevState);
