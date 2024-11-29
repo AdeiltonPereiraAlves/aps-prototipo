@@ -16,6 +16,7 @@ interface MyContextType {
   cadastroOuLogin: boolean;
   CadastroOuLogin: () => void;
   listaArray:Lista[]
+  
 }
 // Criação do contexto
 const MeuContext = createContext<MyContextType|undefined>(undefined);
@@ -28,9 +29,9 @@ export const MeuContextoProvider = ({ children }: { children: ReactNode }) => {
   const CadastroOuLogin = () => {
     setCadastroOuLogin((prevState) => !prevState);
   };
-
+  
   return (
-    <MeuContext.Provider value={{ cadastroOuLogin, CadastroOuLogin, listaArray }}>
+    <MeuContext.Provider value={{ cadastroOuLogin, CadastroOuLogin, listaArray}}>
       {children}
     </MeuContext.Provider>
   );
@@ -40,7 +41,7 @@ export const MeuContextoProvider = ({ children }: { children: ReactNode }) => {
 export const useMyContext = () => {
   const context = useContext(MeuContext);
   if (!context) {
-    throw new Error('useMyContext must be used within a MeuContextoProvider');
+    throw new Error('Não existe contexto');
   }
   return context;
 };

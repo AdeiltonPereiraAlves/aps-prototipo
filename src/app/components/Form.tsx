@@ -22,13 +22,13 @@ export default function Form(props: any){
         setName('')
     
         // Redireciona para a página "Tela"
-        router.push('/Home/Inicio');
+        router.push('/Paginas/Home');
       };
    
     return cadastroOuLogin?(
-        <div>
+        <div >
             {cadastroOuLogin}
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
                 <label >Nome</label>
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                 <label >Email:</label>

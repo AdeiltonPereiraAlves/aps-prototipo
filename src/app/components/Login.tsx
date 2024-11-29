@@ -13,7 +13,7 @@ export default function Login(){
                 <label >Senha:</label>
                 <input type="password" name="senha" value={senha} onChange={(e) => setSenha(e.target.value)}/>
             </div>
-            <button onClick={()=> router.push('/Home/Inicio')}>Login</button>
+            <button onClick={()=> router.push('/Paginas/Home')}>Login</button>
         </div>
     )
 }
